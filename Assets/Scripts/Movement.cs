@@ -5,8 +5,10 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public SpriteRenderer sprite;
     public float Force;
-    int iloscKlatek = 0;
+    public Animator anim;
+    public Sprite DeadBird;
 
     private void Start()
     {
@@ -18,10 +20,16 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            iloscKlatek++;
-            Debug.Log("Update " + iloscKlatek);
+            
             rb.velocity = new Vector2(0, Force);
 
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Kolizja: " + collision.name);
+        anim.enabled = false;
+        sprite.sprite = DeadBird;
     }
 }

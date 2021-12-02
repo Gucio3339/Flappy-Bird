@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 2138613327}
   - component: {fileID: 2138613330}
   - component: {fileID: 2138613331}
+  - component: {fileID: 2138613332}
   m_Layer: 0
   m_Name: Bird 1
   m_TagString: Untagged
@@ -674,4 +675,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2138613330}
+  sprite: {fileID: 2138613328}
   Force: 0.7
+  anim: {fileID: 2138613327}
+  DeadBird: {fileID: 8181548382722186305, guid: 16454c930a4814d4c8fbf00e49322b55, type: 3}
+--- !u!70 &2138613332
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138613326}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.17, y: 0.12}
+  m_Direction: 1
