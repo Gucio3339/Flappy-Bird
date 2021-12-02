@@ -7,13 +7,14 @@ public class Generator : MonoBehaviour
 
     public GameObject przeszkoda;
 
-    private void Start()
+    void Start()
     {
-
+        InvokeRepeating("StworzPrzeszkode", 3, 5);
     }
 
     void StworzPrzeszkode()
     {
-
+        Debug.Log("Stworz przeszkode");
+        Instantiate(przeszkoda, transform.position,Quaternion.identity);
     }
 }
