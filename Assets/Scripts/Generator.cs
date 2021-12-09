@@ -9,12 +9,13 @@ public class Generator : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(Random.Range(-1f, 2));
         InvokeRepeating("StworzPrzeszkode", 3, 5);
     }
 
     void StworzPrzeszkode()
     {
         Debug.Log("Stworz przeszkode");
-        Instantiate(przeszkoda, transform.position,Quaternion.identity);
+        Instantiate(przeszkoda, new Vector2(transform.position.x, -1f + Random.Range(-1f, 2)), Quaternion.identity);
     }
 }
