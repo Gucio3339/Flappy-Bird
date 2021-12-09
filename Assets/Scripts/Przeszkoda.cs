@@ -10,6 +10,8 @@ public class Przeszkoda : MonoBehaviour
     {
         
     }
+    
+    //Generuje przeszkody
     void Update()
     {
         transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));

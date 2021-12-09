@@ -7,6 +7,8 @@ public class Generator : MonoBehaviour
 
     public GameObject przeszkoda;
 
+
+    //Generuje przeszkody
     void Start()
     {
         Debug.Log(Random.Range(-1f, 2));
